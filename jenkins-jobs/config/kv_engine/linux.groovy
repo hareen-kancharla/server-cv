@@ -4,5 +4,5 @@ return {
 // like missing header #includes.
 CMAKE_ARGS="${CMAKE_ARGS} -DCB_UNITY_BUILD=OFF"
 
-CTEST_ARGS="--exclude-regex memcached-spdlogger-test"
+CTEST_ARGS="--exclude-regex memcached-spdlogger-test -V"
 }
