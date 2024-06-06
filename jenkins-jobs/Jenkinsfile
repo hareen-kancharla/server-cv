@@ -48,7 +48,7 @@ pipeline {
                                           compareType: 'PLAIN',
                                           disableStrictForbiddenFileVerification: false,
                                           pattern: getProjectName()]],
-                        triggerOnEvents: [commentAddedContains(commentAddedCommentContains: "make tests")])])])
+                        triggerOnEvents: [commentAddedContains(commentAddedCommentContains: "(?i)make tests?")])])])
                 }
 
                 // look for config files which specify env vars
