@@ -48,12 +48,7 @@ pipeline {
                                           compareType: 'PLAIN',
                                           disableStrictForbiddenFileVerification: false,
                                           pattern: getProjectName()]],
-                        triggerOnEvents: [patchsetCreated(excludeDrafts: true,
-                                                          excludeNoCodeChange: true,
-                                                          excludeTrivialRebase: false,
-                                                          excludeWipState: true),
-                                          draftPublished(),
-                                          wipStateChanged()])])])
+                        triggerOnEvents: [commentAddedContains(commentAddedCommentContains: "(?i)make tests?")])])])
                 }
 
                 // look for config files which specify env vars
